@@ -1,0 +1,2 @@
+adapter: jdbc
+database: sqlite:db/database.db
