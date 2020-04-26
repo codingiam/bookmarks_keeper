@@ -1,0 +1,4 @@
+class DashboardManifest
+  DASHBOARDS = [
+  ]
+end
