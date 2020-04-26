@@ -11,17 +11,17 @@ gem 'haml-rails', '~> 1.0'
 gem 'high_voltage'
 # gem "inifile"
 # gem 'jwt'
-# gem 'nokogiri', '>= 1.8.2'
+gem 'nokogiri', '>= 1.10.8'
 # gem 'omniauth-rails_csrf_protection'
 # gem 'paranoia', '~> 2.2'
 # gem 'pathspec'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
+gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 gem 'rails-assets-normalize-css', source: 'https://rails-assets.org'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '>= 4.3.3'
 # gem 'record_tag_helper'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
