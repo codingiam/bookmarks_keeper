@@ -21,7 +21,7 @@ gem 'rails-assets-normalize-css', source: 'https://rails-assets.org'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 # gem 'record_tag_helper'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
