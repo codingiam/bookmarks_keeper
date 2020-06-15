@@ -40,3 +40,5 @@ yarn-debug.log*
 .env.local
 
 /vendor/bundle
+
+TAGS
