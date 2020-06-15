@@ -14,7 +14,7 @@
     "@babel/preset-env": "^7.6.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "4.2.2",
+    "@rails/webpacker": "5.1.1",
     "acorn": "^7.1.1",
     "babel-loader": "8.0.6",
     "classnames": "^2.2.5",
@@ -52,7 +52,7 @@
     "jest": "^24.9.0",
     "sinon": "^7.4.2",
     "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.10.1"
+    "webpack-dev-server": "^3.11.0"
   },
   "repository": {
     "type": "git",
