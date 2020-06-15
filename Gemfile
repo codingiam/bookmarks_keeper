@@ -16,7 +16,7 @@ gem 'nokogiri', '>= 1.10.8'
 # gem 'paranoia', '~> 2.2'
 # gem 'pathspec'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
+gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 gem 'rails-assets-normalize-css', source: 'https://rails-assets.org'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
