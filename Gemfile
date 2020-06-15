@@ -56,6 +56,7 @@ group :development, :test do
   gem 'foreman'
   gem 'rspec-rails', '>= 3.4'
   gem 'rubocop', '~> 0.78.0', require: false
+  gem 'rubocop-rails', require: false
   gem 'ruby-prof'
   gem 'attractor'
 end
