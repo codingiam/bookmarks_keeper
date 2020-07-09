@@ -17,7 +17,6 @@ gem 'nokogiri', '>= 1.10.8'
 # gem 'pathspec'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
-gem 'rails-assets-normalize-css', source: 'https://rails-assets.org'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
@@ -40,6 +39,8 @@ gem 'jbuilder', '~> 2.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+
+gem 'bootstrap', '~> 4.5.0'
 
 group :production do
   gem 'rack-timeout'
