@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %meta{ content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type" }
+    %title= [content_for(:page_title), 'Bookmarks Keeper'].compact.uniq.join(" - ")
+    = csrf_meta_tags
+    = csp_meta_tag
+    - if content_for? :meta_description
+      %meta{ content: "#{content_for(:meta_description)}", name: "description" }/
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_pack_tag 'application'
+  %body
+    = yield
