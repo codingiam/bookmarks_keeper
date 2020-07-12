@@ -1,13 +1,23 @@
 !!!
-%html
+%html{ lang: "en" }
   %head
     %meta{ content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type" }
+    %meta{ content: "width=device-width, initial-scale=1, shrink-to-fit=no", name: "viewport" }
     %title= [content_for(:page_title), 'Bookmarks Keeper'].compact.uniq.join(" - ")
     = csrf_meta_tags
     = csp_meta_tag
     - if content_for? :meta_description
       %meta{ content: "#{content_for(:meta_description)}", name: "description" }/
     = stylesheet_link_tag 'application', media: 'all'
-    = javascript_pack_tag 'application'
   %body
-    = yield
+    %header
+      %nav
+        %a.text-dark{ href: "#" } Sign in
+    %main
+      = yield
+    %footer
+      %p
+        %small
+          %span.text-muted &copy; 2020
+          CodingIAm
+    = javascript_pack_tag 'application'
