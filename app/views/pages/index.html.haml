@@ -1,4 +1,10 @@
-- content_for :page_title, I18n.t("home.index.title")
-- content_for :meta_description, I18n.t("home.index.description")
+- content_for :page_title, I18n.t("pages.index.title")
+- content_for :meta_description, I18n.t("pages.index.description")
 
 %h1 Bookmarks Keeper
+
+= form_for :search, method: :get, url: '/', as: '', html: { id: :search, class: 'form', novalidate: true } do |f|
+  .form-group
+    = f.text_field :q, maxlength: 2048, size: 25, required: true, class: 'form-control'
+  .form-group
+    = f.button I18n.t('helpers.submit.search.submit'), type: :submit, name: nil, class: 'btn btn-primary'
