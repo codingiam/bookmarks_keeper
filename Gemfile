@@ -7,7 +7,7 @@ ruby '2.6.5'
 gem 'attr_extras'
 # gem 'email_validator'
 # gem 'faraday'
-gem 'haml-rails', '~> 1.0'
+gem 'haml-rails'
 gem 'high_voltage'
 # gem "inifile"
 # gem 'jwt'
@@ -16,7 +16,7 @@ gem 'nokogiri', '>= 1.10.8'
 # gem 'paranoia', '~> 2.2'
 # gem 'pathspec'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
+gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
@@ -29,7 +29,7 @@ gem 'sidekiq'
 gem 'sinatra', '~> 2.0'
 # gem 'uglifier', '>= 2.7.2'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
+gem 'webpacker'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
@@ -42,12 +42,12 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'bootstrap', '~> 4.5.0'
 
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.4.2', require: false
+
 group :production do
   gem 'rack-timeout'
 end
-
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -60,11 +60,13 @@ group :development, :test do
   gem 'rubocop-rails', require: false
   gem 'ruby-prof'
   gem 'attractor'
+  gem 'pry-byebug'
+  gem 'pry-rails'
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 4.0.4'
   gem 'listen', '>= 3.0.5', '< 3.2'
 end
 
