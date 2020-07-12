@@ -1,13 +1,13 @@
 require "rails_helper"
 
-describe HomeController do
+describe PagesController do
   describe "#index" do
     context "when https is enabled" do
       context "and http is used" do
         it "redirects to https" do
           stub_const("BookmarksKeeper::HTTPS_ENABLED", "yes")
 
-          get :index
+          get :show, params: { id: :index }
 
           expect(response).to redirect_to(root_url(protocol: "https"))
         end
@@ -18,7 +18,7 @@ describe HomeController do
           stub_const("BookmarksKeeper::HTTPS_ENABLED", "yes")
           request.env["HTTPS"] = "on"
 
-          get :index
+          get :show, params: { id: :index }
 
           expect(response).not_to be_redirect
         end
@@ -28,7 +28,7 @@ describe HomeController do
     context "when https is disabled" do
       context "and http is used" do
         it "does not redirect" do
-          get :index
+          get :show, params: { id: :index }
 
           expect(response).not_to be_redirect
         end
