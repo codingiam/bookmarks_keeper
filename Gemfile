@@ -42,6 +42,8 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'bootstrap', '~> 4.5.0'
 
+gem 'reform-rails'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
