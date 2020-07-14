@@ -30,5 +30,7 @@ Rails.application.routes.draw do
     get status_code, to: "errors#show", code: status_code
   end
 
+  resources :webpages
+
   root to: "pages#show", id: "index"
 end
