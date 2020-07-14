@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   # get "/auth/github/callback", to: "sessions#create"
   # get "/sign_out", to: "sessions#destroy"
 
-  get "/pages/*id" => "pages#show", as: :page, format: false
+  get "/pages/*id" => "pages#show", as: :pages, format: false
 
   %w(404 422 500).each do |status_code|
     get status_code, to: "errors#show", code: status_code
