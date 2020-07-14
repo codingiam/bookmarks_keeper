@@ -1,0 +1,5 @@
+= form_for SearchForm.new, as: '', url: webpages_path, method: :get, html: { id: :search, class: 'form', novalidate: true } do |f|
+  .form-group
+    = f.text_field :q, maxlength: 2048, size: 25, required: true, class: 'form-control'
+  .form-group
+    = f.button I18n.t('helpers.submit.search.submit'), type: :submit, name: nil, class: 'btn btn-primary'
