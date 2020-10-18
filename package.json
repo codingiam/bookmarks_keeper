@@ -14,7 +14,7 @@
     "@babel/preset-env": "^7.6.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "5.1.1",
+    "@rails/webpacker": "5.2.1",
     "acorn": "^7.1.1",
     "babel-loader": "8.0.6",
     "classnames": "^2.2.5",
