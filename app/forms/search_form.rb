@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# :nodoc:
 class SearchForm < Reform::Form
   property :q
 
@@ -5,7 +8,7 @@ class SearchForm < Reform::Form
     super(OpenStruct.new)
   end
 
-  def self.property(name, options={})
+  def self.property(name, options = {})
     super(name, options.merge(virtual: true))
   end
 end

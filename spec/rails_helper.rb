@@ -1,13 +1,15 @@
-ENV["RAILS_ENV"] ||= "test"
+# frozen_string_literal: true
 
-require "config/environment"
-require "rspec/rails"
-require "sidekiq/testing"
+ENV['RAILS_ENV'] ||= 'test'
+
+require 'config/environment'
+require 'rspec/rails'
+require 'sidekiq/testing'
 
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
-  %i(request feature).each do |type|
+  %i[request feature].each do |type|
     config.before :each, type: type do
       stub_request(:any, /api.github.com/).to_rack(FakeHttp)
     end
@@ -27,12 +29,12 @@ end
 
 Capybara.register_driver :headless_chrome do |app|
   options = Selenium::WebDriver::Chrome::Options.new
-  options.add_argument("--headless")
-  options.add_argument("--disable-gpu")
-  options.add_argument("--window-size=1280,1024")
+  options.add_argument('--headless')
+  options.add_argument('--disable-gpu')
+  options.add_argument('--window-size=1280,1024')
 
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end
 
 Capybara.javascript_driver = :headless_chrome
-Capybara.server = :puma, { Silent: true, Threads: "1:1" }
+Capybara.server = :puma, { Silent: true, Threads: '1:1' }

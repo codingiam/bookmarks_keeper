@@ -1,16 +1,18 @@
-$LOAD_PATH << File.expand_path("..", __dir__)
+# frozen_string_literal: true
 
-require "active_support"
-require "active_support/core_ext"
-require "byebug"
-require "webmock/rspec"
+$LOAD_PATH << File.expand_path('..', __dir__)
 
-ENV["REDIS_URL"] = "redis://localhost:6379/1"
+require 'active_support'
+require 'active_support/core_ext'
+require 'byebug'
+require 'webmock/rspec'
 
-Dir["spec/support/**/*.rb"].each { |f| require f }
+ENV['REDIS_URL'] = 'redis://localhost:6379/1'
+
+Dir['spec/support/**/*.rb'].sort.each { |f| require f }
 
 RSpec.configure do |config|
-  config.order = "random"
+  config.order = 'random'
   config.include SpecHelper
   WebMock.disable_net_connect!(allow_localhost: true)
 

@@ -61,6 +61,7 @@ group :development, :test do
   gem 'rspec-rails', '>= 3.4'
   gem 'rubocop', '~> 0.78.0', require: false
   gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
   gem 'ruby-prof'
   gem 'attractor'
   gem 'pry-byebug'
