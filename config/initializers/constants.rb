@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-# :nodoc:
-module BookmarksKeeper
+module BookmarksKeeper # :nodoc:
   HOST ||= ENV.fetch('HOST')
   HTTPS_ENABLED ||= ENV.fetch('ENABLE_HTTPS') == 'yes'
 end

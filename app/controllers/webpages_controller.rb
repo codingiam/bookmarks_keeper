@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# :nodoc:
-class WebpagesController < ApplicationController
+class WebpagesController < ApplicationController # :nodoc:
   def index; end
 end

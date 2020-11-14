@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# :nodoc:
-class PagesController < ApplicationController
+class PagesController < ApplicationController # :nodoc:
   include HighVoltage::StaticPage
 end

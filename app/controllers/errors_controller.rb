@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-# :nodoc:
-class ErrorsController < ApplicationController
+class ErrorsController < ApplicationController # :nodoc:
   def show
     render view, status: status_code
   end

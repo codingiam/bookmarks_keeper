@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-# :nodoc:
-class ApplicationController < ActionController::Base
+class ApplicationController < ActionController::Base # :nodoc:
   protect_from_forgery
 
   before_action :force_https

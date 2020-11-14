@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-# :nodoc:
-class SearchForm < Reform::Form
+class SearchForm < Reform::Form # :nodoc:
   property :q
 
   def initialize
