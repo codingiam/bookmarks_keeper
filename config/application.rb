@@ -23,8 +23,14 @@ require 'sprockets/railtie'
 Bundler.require(*Rails.groups)
 
 module BookmarksKeeper
-  # :nodoc:
-  class Application < Rails::Application
+  class Application < Rails::Application # :nodoc:
+    def initialize!
+      start = Time.current
+      super
+      time = (Time.current - start) * 1000
+      warn "[BOOT] Rails booted in #{time}ms"
+    end
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
@@ -33,8 +39,8 @@ module BookmarksKeeper
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
-    config.autoload_paths += %W[#{config.root}/lib]
-    config.eager_load_paths += %W[#{config.root}/lib]
+    # config.autoload_paths += %W[#{config.root}/lib]
+    # config.eager_load_paths += %W[#{config.root}/lib]
     config.encoding = 'utf-8'
     config.filter_parameters += [:password]
     config.active_support.escape_html_entities_in_json = true
