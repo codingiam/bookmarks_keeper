@@ -42,3 +42,5 @@ yarn-debug.log*
 /vendor/bundle
 
 TAGS
+
+/config/credentials/development.key
