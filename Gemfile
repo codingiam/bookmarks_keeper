@@ -5,7 +5,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
+ruby '2.6.6'
 
 # gem 'administrate', '0.8.1'
 gem 'attr_extras'
@@ -20,7 +20,7 @@ gem 'nokogiri', '>= 1.10.8'
 # gem 'paranoia', '~> 2.2'
 # gem 'pathspec'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
+gem 'rails', '~> 6.1.0', '>= 6.1.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
