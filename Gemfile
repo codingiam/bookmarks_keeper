@@ -15,7 +15,7 @@ gem 'haml-rails'
 gem 'high_voltage'
 # gem "inifile"
 # gem 'jwt'
-gem 'nokogiri', '>= 1.10.8'
+gem 'nokogiri', '>= 1.11.0'
 # gem 'omniauth-rails_csrf_protection'
 # gem 'paranoia', '~> 2.2'
 # gem 'pathspec'
