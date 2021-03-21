@@ -8,9 +8,10 @@ class ApplicationController < ActionController::Base # :nodoc:
   private
 
   def force_https
-    return unless BookmarksKeeper::HTTPS_ENABLED && !request.ssl? && force_https?
+    return unless BookmarksKeeper::Cfg::HTTPS_ENABLED &&
+      !request.ssl? && force_https?
 
-    redirect_to protocol: 'https://', status: :moved_permanently
+    redirect_to protocol: "https://", status: :moved_permanently
   end
 
   def force_https?

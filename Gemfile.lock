@@ -1,3 +1,8 @@
+PATH
+  remote: vendor/gems/bookmarks_keeper-cfg
+  specs:
+    bookmarks_keeper-cfg (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -393,6 +398,7 @@ PLATFORMS
 DEPENDENCIES
   attr_extras
   attractor
+  bookmarks_keeper-cfg!
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.5.0)
   bundler-audit

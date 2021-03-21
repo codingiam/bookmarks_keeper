@@ -6,7 +6,7 @@
 #
 default: &default
   adapter: sqlite3
-  pool: <%= ENV.fetch("DB_POOL") { 5 } %>
+  pool: <%= BookmarksKeeper::Cfg::DB_POOL %>
   timeout: 5000
 
 development:
