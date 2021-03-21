@@ -7,6 +7,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
+Dir.glob(File.expand_path('vendor/gems/**/*.gemspec'))
+  .map(&File.method(:dirname))
+  .each { |path| gem File.basename(path), path: path }
+
 # gem 'administrate', '0.8.1'
 gem 'attr_extras'
 # gem 'email_validator'
