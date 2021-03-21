@@ -1,11 +1,27 @@
+inherit_mode:
+  merge:
+    - Exclude
+
 require:
-  - rubocop-rails
   - rubocop-rspec
   - rubocop-performance
+  - rubocop-rails
+  - standard/cop/block_single_line_braces
+
+inherit_gem:
+  standard: config/base.yml
+
+inherit_from:
+  - .rubocop_todo.yml
+
 AllCops:
   TargetRubyVersion: 2.6
-Metrics/LineLength:
-  Enabled: true
-  Max: 120
+
 Lint/MissingCopEnableDirective:
   Enabled: false
+
+Metrics:
+   Enabled: true
+
+Layout/LineLength:
+  Max: 80

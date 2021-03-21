@@ -63,10 +63,6 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'foreman'
   gem 'rspec-rails', '>= 3.4'
-  gem 'rubocop', '~> 0.78.0', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec', require: false
-  gem 'rubocop-performance', require: false
   gem 'ruby-prof'
   gem 'attractor'
   gem 'pry-byebug'
@@ -77,6 +73,12 @@ group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.0.4'
   gem 'listen', '>= 3.0.5', '< 3.2'
+
+  gem 'rubocop', '~> 1.11.0', require: false
+  gem 'rubocop-rspec', '~> 1.41.0', require: false
+  gem 'rubocop-performance', '~> 1.10.1', require: false
+  gem 'rubocop-rails', '~> 2.5.2', require: false
+  gem 'standard', '~> 1.0.4', require: false
 end
 
 group :test do
