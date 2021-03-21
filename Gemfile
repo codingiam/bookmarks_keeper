@@ -7,6 +7,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
+gem 'dotenv-rails', require: 'dotenv/rails-now', group: [:development, :test]
+
 Dir.glob(File.expand_path('vendor/gems/**/*.gemspec'))
   .map(&File.method(:dirname))
   .each { |path| gem File.basename(path), path: path }
@@ -64,7 +66,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'bundler-audit', require: false
-  gem 'dotenv-rails', require: 'dotenv/rails-now'
   gem 'foreman'
   gem 'rspec-rails', '>= 3.4'
   gem 'ruby-prof'
