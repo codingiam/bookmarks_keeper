@@ -14,6 +14,7 @@ Dir['spec/support/**/*.rb'].sort.each { |f| require f }
 RSpec.configure do |config|
   config.order = 'random'
   config.include SpecHelper
+
   WebMock.disable_net_connect!(allow_localhost: true)
 
   config.define_derived_metadata do |meta|
